@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,53 +18,63 @@ body{
     color:white;
 }
 
+/* HEADER */
+
 header{
     text-align:center;
-    padding:60px 20px;
-    background:linear-gradient(180deg,#1a1a1a,#0f0f0f);
+    padding:80px 20px;
+    background:linear-gradient(180deg,#171717,#0f0f0f);
 }
 
 .logo{
-    font-size:50px;
-    margin-bottom:15px;
+    margin-bottom:25px;
+}
+
+.logo img{
+    width:170px;
+    height:auto;
+    object-fit:contain;
+    filter:drop-shadow(0 0 20px rgba(255,255,255,0.08));
 }
 
 header h1{
-    font-size:42px;
+    font-size:48px;
     margin-bottom:10px;
 }
 
 header p{
     color:#b0b0b0;
-    font-size:18px;
+    font-size:20px;
 }
+
+/* APPS */
 
 .apps{
     max-width:1100px;
     margin:auto;
-    padding:50px 20px;
+    padding:60px 20px;
 }
 
 .card{
     background:#1b1b1b;
-    border-radius:25px;
-    padding:35px;
+    border-radius:30px;
+    padding:40px;
     display:flex;
     flex-wrap:wrap;
     align-items:center;
-    gap:30px;
-    box-shadow:0 0 30px rgba(0,0,0,0.4);
+    gap:35px;
+    box-shadow:0 0 40px rgba(0,0,0,0.5);
 }
 
 .icon{
-    width:140px;
-    height:140px;
-    border-radius:30px;
-    background:#2a2a2a;
+    width:150px;
+    height:150px;
+    border-radius:35px;
+    background:#252525;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:60px;
+    font-size:65px;
 }
 
 .info{
@@ -73,20 +82,22 @@ header p{
 }
 
 .info h2{
-    font-size:34px;
-    margin-bottom:10px;
+    font-size:36px;
+    margin-bottom:15px;
 }
 
 .info p{
     color:#c0c0c0;
-    margin-bottom:20px;
-    line-height:1.6;
+    line-height:1.8;
+    margin-bottom:25px;
+    font-size:17px;
 }
 
 .price{
-    font-size:28px;
+    font-size:30px;
     color:#55ff88;
     margin-bottom:25px;
+    font-weight:bold;
 }
 
 .button{
@@ -94,21 +105,45 @@ header p{
     background:#6a5cff;
     color:white;
     text-decoration:none;
-    padding:15px 35px;
-    border-radius:15px;
+    padding:16px 40px;
+    border-radius:18px;
     font-weight:bold;
     transition:0.3s;
 }
 
 .button:hover{
-    transform:scale(1.05);
     background:#7b6cff;
+    transform:translateY(-3px);
 }
 
 footer{
     text-align:center;
-    padding:50px 20px;
-    color:#808080;
+    padding:60px 20px;
+    color:#707070;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:800px){
+
+    .card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .icon{
+        width:120px;
+        height:120px;
+        font-size:55px;
+    }
+
+    header h1{
+        font-size:38px;
+    }
+
+    .info h2{
+        font-size:30px;
+    }
 }
 </style>
 </head>
@@ -116,46 +151,52 @@ footer{
 <body>
 
 <header>
-    <div class="logo">🎩✨</div>
+
+    <div class="logo">
+        <img src="logo.png" alt="Daster FX">
+    </div>
+
     <h1>Daster FX</h1>
     <p>Aplicaciones para magos y mentalistas.</p>
+
 </header>
 
 <section class="apps">
 
-<div class="card">
+    <div class="card">
 
-<div class="icon">
-🃏
-</div>
+        <div class="icon">
+            🃏
+        </div>
 
-<div class="info">
-<h2>Calculadora Mágica</h2>
+        <div class="info">
 
-<p>
-Una poderosa herramienta para magos y mentalistas que convierte
-una simple calculadora en un impresionante efecto de magia.
-Diseñada para actuaciones profesionales y de cerca.
-</p>
+            <h2>Calculadora Mágica</h2>
 
-<div class="price">
-Próximamente disponible
-</div>
+            <p>
+                Una poderosa herramienta para magos y mentalistas que transforma
+                una simple calculadora en un increíble efecto de magia.
+                Diseñada para actuaciones profesionales, magia de cerca y
+                presentaciones de mentalismo.
+            </p>
 
-<a class="button" href="#">
-Comprar
-</a>
+            <div class="price">
+                Próximamente disponible
+            </div>
 
-</div>
+            <a class="button" href="#">
+                Comprar
+            </a>
 
-</div>
+        </div>
+
+    </div>
 
 </section>
 
 <footer>
-© 2026 Daster FX - Todos los derechos reservados.
+    © 2026 Daster FX · Todos los derechos reservados.
 </footer>
 
 </body>
 </html>
-```
