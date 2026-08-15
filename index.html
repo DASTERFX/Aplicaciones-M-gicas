@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Daster FX - Aplicaciones Mágicas</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -18,115 +20,217 @@
             color: white;
         }
 
-        /* HEADER */
+
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             position: relative;
             overflow: hidden;
+
             text-align: center;
-            padding: 110px 20px;
+
+            padding: 65px 20px 55px;
+
             background:
                 radial-gradient(
                     circle at top,
                     rgba(255, 140, 0, 0.18),
                     transparent 45%
                 ),
-                linear-gradient(180deg, #161616, #0d0d0d);
+                linear-gradient(
+                    180deg,
+                    #161616,
+                    #0d0d0d
+                );
         }
+
 
         .header-glow {
             position: absolute;
-            width: 450px;
-            height: 450px;
-            background: rgba(255, 140, 0, 0.15);
+
+            width: 400px;
+            height: 400px;
+
+            background: rgba(255, 140, 0, 0.13);
+
             border-radius: 50%;
+
             filter: blur(120px);
-            top: -180px;
+
+            top: -220px;
             left: 50%;
+
             transform: translateX(-50%);
+
             pointer-events: none;
         }
 
+
+        /* LOGO */
+
         .logo {
             position: relative;
-            margin-bottom: 25px;
+
+            margin-bottom: 12px;
         }
 
+
         .logo img {
-            width: 180px;
+            width: 135px;
             height: auto;
-            filter: drop-shadow(0 0 25px rgba(255, 140, 0, 0.25));
+
+            filter:
+                drop-shadow(
+                    0 0 22px rgba(255, 140, 0, 0.25)
+                );
         }
+
+
+        /* TITULO */
 
         header h1 {
             position: relative;
-            font-size: 58px;
-            letter-spacing: 3px;
-            margin-bottom: 10px;
+
+            font-size: 48px;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 8px;
         }
 
+
+        /* LINEA */
+
         .divider {
-            width: 110px;
-            height: 4px;
+            width: 85px;
+            height: 3px;
+
             background: #ff8c00;
-            margin: 25px auto;
+
+            margin: 14px auto 18px;
+
             border-radius: 20px;
+
+            box-shadow:
+                0 0 12px rgba(255, 140, 0, 0.25);
         }
+
+
+        /* SUBTITULO */
 
         .subtitle {
             color: #f0f0f0;
-            font-size: 22px;
-            margin-bottom: 30px;
+
+            font-size: 19px;
+
+            margin-bottom: 18px;
         }
+
+
+        /* DESCRIPCION */
 
         .description {
-            max-width: 800px;
+            max-width: 700px;
+
             margin: auto;
-            color: #a8a8a8;
-            line-height: 1.9;
-            font-size: 17px;
+
+            color: #999;
+
+            line-height: 1.7;
+
+            font-size: 15px;
         }
 
-        /* APPS */
+
+        /* =========================
+           APPS
+        ========================= */
 
         .apps {
             max-width: 1100px;
+
             margin: auto;
-            padding: 70px 20px;
+
+            padding: 60px 20px 70px;
         }
+
+
+        /* CARD */
 
         .card {
             background: #181818;
-            border-radius: 35px;
-            padding: 40px;
+
+            border-radius: 30px;
+
+            padding: 32px;
+
             display: flex;
+
             flex-wrap: wrap;
+
             align-items: center;
-            gap: 40px;
-            box-shadow: 0 0 40px rgba(0, 0, 0, 0.45);
-            border: 1px solid rgba(255, 140, 0, 0.1);
-            margin-bottom: 40px;
+
+            gap: 32px;
+
+            box-shadow:
+                0 0 40px rgba(0, 0, 0, 0.4);
+
+            border:
+                1px solid rgba(255, 140, 0, 0.08);
+
+            margin-bottom: 28px;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
         }
 
+
+        .card:hover {
+            transform: translateY(-4px);
+
+            border-color:
+                rgba(255, 140, 0, 0.25);
+
+            box-shadow:
+                0 15px 45px rgba(0, 0, 0, 0.5);
+        }
+
+
+        /* ICONO */
+
         .icon {
-            width: 150px;
-            height: 150px;
-            border-radius: 35px;
+            width: 145px;
+            height: 145px;
+
+            border-radius: 32px;
+
             background: #232323;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             overflow: hidden;
+
             flex-shrink: 0;
+
+            box-shadow:
+                inset 0 0 20px rgba(0, 0, 0, 0.25);
         }
+
 
         .icon img {
             width: 90%;
             height: 90%;
+
             object-fit: contain;
         }
 
-        /* ICONOS */
 
         .lock-icon,
         .kronos-icon,
@@ -136,144 +240,252 @@
             height: 100% !important;
         }
 
+
+        /* INFORMACION */
+
         .info {
             flex: 1;
         }
 
+
+        /* TITULOS */
+
         .info h2 {
-            font-size: 36px;
-            margin-bottom: 15px;
+            font-size: 32px;
+
+            margin-bottom: 12px;
         }
 
-        /* TITULOS CLICKEABLES */
 
         .app-title {
             color: white;
+
             text-decoration: none;
-            transition: 0.3s;
-            cursor: pointer;
+
+            transition: color 0.25s ease;
         }
+
 
         .app-title:hover {
             color: #ff8c00;
         }
 
+
+        /* DESCRIPCION APP */
+
         .info p {
-            color: #c0c0c0;
-            line-height: 1.8;
-            margin-bottom: 0;
-            font-size: 17px;
+            color: #b8b8b8;
+
+            line-height: 1.7;
+
+            font-size: 16px;
+
+            margin-bottom: 16px;
         }
 
+
+        /* ESTADO */
+
         .price {
-            font-size: 30px;
+            font-size: 21px;
+
             color: #ff8c00;
-            margin-top: 25px;
+
             font-weight: bold;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             text-align: center;
-            padding: 60px 20px;
-            color: #707070;
+
+            padding: 50px 20px;
+
+            color: #666;
+
+            font-size: 14px;
         }
 
-        /* RESPONSIVE */
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
 
         @media (max-width: 800px) {
 
+            header {
+                padding:
+                    50px 20px
+                    45px;
+            }
+
+
+            .logo img {
+                width: 115px;
+            }
+
+
+            header h1 {
+                font-size: 40px;
+
+                letter-spacing: 3px;
+            }
+
+
+            .subtitle {
+                font-size: 17px;
+            }
+
+
+            .description {
+                font-size: 15px;
+
+                line-height: 1.6;
+            }
+
+
+            .apps {
+                padding:
+                    40px 15px
+                    50px;
+            }
+
+
             .card {
                 flex-direction: column;
+
                 text-align: center;
+
+                padding: 28px 22px;
+
+                gap: 22px;
             }
+
 
             .icon {
                 width: 120px;
                 height: 120px;
+
+                border-radius: 28px;
             }
 
-            header {
-                padding: 90px 20px;
-            }
-
-            header h1 {
-                font-size: 42px;
-            }
-
-            .subtitle {
-                font-size: 19px;
-            }
-
-            .description {
-                font-size: 16px;
-            }
 
             .info h2 {
-                font-size: 30px;
+                font-size: 28px;
             }
 
-            .logo img {
-                width: 140px;
+
+            .info p {
+                font-size: 15px;
+            }
+
+
+            .price {
+                font-size: 19px;
             }
         }
+
     </style>
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
     <div class="header-glow"></div>
 
+
     <div class="logo">
-        <img src="logo.png" alt="Daster FX">
+
+        <img
+            src="logo.png"
+            alt="Daster FX"
+        >
+
     </div>
 
-    <h1>Daster FX</h1>
+
+    <h1>
+        Daster FX
+    </h1>
+
 
     <div class="divider"></div>
+
 
     <div class="subtitle">
         Aplicaciones exclusivas para magos y mentalistas
     </div>
 
+
     <div class="description">
-        Daster FX es un estudio independiente dedicado al diseño y desarrollo
-        de herramientas innovadoras para la magia y el mentalismo. Nuestro objetivo
-        es combinar tecnología y creatividad para ayudar a los artistas a crear
-        experiencias imposibles y memorables.
+
+        Daster FX es un estudio independiente dedicado al diseño
+        y desarrollo de herramientas innovadoras para la magia
+        y el mentalismo.
+
     </div>
 
 </header>
 
 
+
+<!-- =========================
+     APLICACIONES
+========================= -->
+
 <section class="apps">
 
-    <!-- 1. KRONOS -->
+
+    <!-- =====================
+         KRONOS
+    ====================== -->
 
     <div class="card">
 
         <div class="icon">
-            <img src="kronosicon.png" alt="Kronos" class="kronos-icon">
+
+            <img
+                src="kronosicon.png"
+                alt="Kronos"
+                class="kronos-icon"
+            >
+
         </div>
+
 
         <div class="info">
 
             <h2>
-                <a href="kronos.html" class="app-title">
+
+                <a
+                    href="kronos.html"
+                    class="app-title"
+                >
                     Kronos
                 </a>
+
             </h2>
 
+
             <p>
-                Una experiencia de mentalismo que desafía por completo la
-                percepción del tiempo. El espectador puede ver cómo el tiempo
-                retrocede ante sus propios ojos, incluso directamente desde su
-                propio teléfono celular. Un efecto visual e inexplicable diseñado
-                para crear un momento que difícilmente olvidará.
+
+                Una experiencia de mentalismo que desafía por completo
+                la percepción del tiempo. El espectador puede ver cómo
+                el tiempo retrocede ante sus propios ojos, incluso
+                directamente desde su propio teléfono celular.
+
             </p>
+
 
             <div class="price">
                 Disponible ahora
@@ -284,29 +496,47 @@
     </div>
 
 
-    <!-- 2. LOCK -->
+
+    <!-- =====================
+         LOCK
+    ====================== -->
 
     <div class="card">
 
         <div class="icon">
-            <img src="iconlock.png" alt="LOck" class="lock-icon">
+
+            <img
+                src="iconlock.png"
+                alt="LOck"
+                class="lock-icon"
+            >
+
         </div>
+
 
         <div class="info">
 
             <h2>
-                <a href="lock.html" class="app-title">
+
+                <a
+                    href="lock.html"
+                    class="app-title"
+                >
                     LOck
                 </a>
+
             </h2>
 
+
             <p>
-                Una poderosa herramienta de mentalismo que permite adivinar
-                mentalmente el PIN elegido por el espectador. El artista puede
-                revelar los números uno a uno hasta descubrir el código completo,
-                creando un momento de auténtica imposibilidad. Diseñada para llevar
-                la lectura de pensamiento al teléfono celular.
+
+                Una poderosa herramienta de mentalismo que permite
+                adivinar mentalmente el PIN elegido por el espectador.
+                El artista puede revelar los números uno a uno hasta
+                descubrir el código completo.
+
             </p>
+
 
             <div class="price">
                 Disponible ahora
@@ -317,28 +547,45 @@
     </div>
 
 
-    <!-- 3. CALCULADORA MÁGICA -->
+
+    <!-- =====================
+         CALCULADORA
+    ====================== -->
 
     <div class="card">
 
         <div class="icon">
-            <img src="calculadora.png" alt="Calculadora Mágica">
+
+            <img
+                src="calculadora.png"
+                alt="Calculadora Mágica"
+            >
+
         </div>
+
 
         <div class="info">
 
             <h2>
-                <a href="calculadora.html" class="app-title">
+
+                <a
+                    href="calculadora.html"
+                    class="app-title"
+                >
                     Calculadora Mágica
                 </a>
+
             </h2>
 
+
             <p>
-                Una poderosa herramienta para magos y mentalistas que transforma
-                una simple calculadora en un increíble efecto de magia.
-                Diseñada para actuaciones profesionales, magia de cerca y
-                presentaciones de mentalismo.
+
+                Una poderosa herramienta para magos y mentalistas
+                que transforma una simple calculadora en un increíble
+                efecto de magia.
+
             </p>
+
 
             <div class="price">
                 Disponible ahora
@@ -349,28 +596,46 @@
     </div>
 
 
-    <!-- 4. MINDHOOK -->
+
+    <!-- =====================
+         MINDHOOK
+    ====================== -->
 
     <div class="card">
 
         <div class="icon">
-            <img src="gancho.png" alt="MindHook" class="mindhook-icon">
+
+            <img
+                src="gancho.png"
+                alt="MindHook"
+                class="mindhook-icon"
+            >
+
         </div>
+
 
         <div class="info">
 
             <h2>
-                <a href="mindhook.html" class="app-title">
+
+                <a
+                    href="mindhook.html"
+                    class="app-title"
+                >
                     MindHook
                 </a>
+
             </h2>
 
+
             <p>
-                Una innovadora herramienta de mentalismo que crea la ilusión de
-                extraer la carta elegida por el espectador utilizando un misterioso
-                gancho virtual. Diseñada para actuaciones impactantes y efectos
-                imposibles que combinan magia y tecnología.
+
+                Una innovadora herramienta de mentalismo que crea
+                la ilusión de extraer la carta elegida por el espectador
+                utilizando un misterioso gancho virtual.
+
             </p>
+
 
             <div class="price">
                 Próximamente
@@ -381,28 +646,46 @@
     </div>
 
 
-    <!-- 5. SCREENCARD -->
+
+    <!-- =====================
+         SCREENCARD
+    ====================== -->
 
     <div class="card">
 
         <div class="icon">
-            <img src="screencard.png" alt="ScreenCard" class="screencard-icon">
+
+            <img
+                src="screencard.png"
+                alt="ScreenCard"
+                class="screencard-icon"
+            >
+
         </div>
+
 
         <div class="info">
 
             <h2>
-                <a href="screencard.html" class="app-title">
+
+                <a
+                    href="screencard.html"
+                    class="app-title"
+                >
                     ScreenCard
                 </a>
+
             </h2>
 
+
             <p>
-                Una innovadora aplicación de magia que permite crear la ilusión
-                de extraer objetos directamente desde la pantalla del celular.
-                Diseñada para magos modernos que buscan efectos visuales
-                imposibles, impactantes y totalmente memorables.
+
+                Una innovadora aplicación de magia que permite crear
+                la ilusión de extraer objetos directamente desde la
+                pantalla del celular.
+
             </p>
+
 
             <div class="price">
                 Próximamente
@@ -411,13 +694,22 @@
         </div>
 
     </div>
+
 
 </section>
 
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
     © 2026 Daster FX · Todos los derechos reservados.
+
 </footer>
+
 
 </body>
 </html>
