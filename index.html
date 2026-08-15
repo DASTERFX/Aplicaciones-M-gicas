@@ -157,7 +157,9 @@
         }
 
 
-        /* CARD */
+        /* =========================
+           TARJETA CLICKEABLE
+        ========================= */
 
         .card {
             background: #181818;
@@ -182,26 +184,38 @@
 
             margin-bottom: 28px;
 
+            text-decoration: none;
+
+            color: white;
+
+            cursor: pointer;
+
             transition:
                 transform 0.3s ease,
                 border-color 0.3s ease,
-                box-shadow 0.3s ease;
+                box-shadow 0.3s ease,
+                background 0.3s ease;
         }
 
 
+        /* EFECTO AL PASAR POR TODA LA TARJETA */
+
         .card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-5px);
+
+            background: #1b1b1b;
 
             border-color:
-                rgba(255, 140, 0, 0.25);
+                rgba(255, 140, 0, 0.35);
 
             box-shadow:
-                0 15px 45px rgba(0, 0, 0, 0.5);
+                0 15px 50px rgba(0, 0, 0, 0.55),
+                0 0 25px rgba(255, 140, 0, 0.08);
         }
 
 
         /* =========================
-           ICONOS CLICKEABLES
+           ICONO
         ========================= */
 
         .icon {
@@ -224,21 +238,17 @@
             box-shadow:
                 inset 0 0 20px rgba(0, 0, 0, 0.25);
 
-            cursor: pointer;
-
-            text-decoration: none;
-
             transition:
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
         }
 
 
-        .icon:hover {
+        .card:hover .icon {
             transform: scale(1.04);
 
             box-shadow:
-                0 0 25px rgba(255, 140, 0, 0.25),
+                0 0 25px rgba(255, 140, 0, 0.18),
                 inset 0 0 20px rgba(0, 0, 0, 0.25);
         }
 
@@ -282,18 +292,10 @@
             color: white;
 
             text-decoration: none;
-
-            transition:
-                color 0.25s ease;
         }
 
 
-        .app-title:hover {
-            color: #ff8c00;
-        }
-
-
-        /* DESCRIPCION APP */
+        /* DESCRIPCION */
 
         .info p {
             color: #b8b8b8;
@@ -472,13 +474,13 @@
          KRONOS
     ====================== -->
 
-    <div class="card">
+    <a
+        href="kronos.html"
+        class="card"
+        aria-label="Ver Kronos"
+    >
 
-        <a
-            href="kronos.html"
-            class="icon"
-            aria-label="Ver Kronos"
-        >
+        <div class="icon">
 
             <img
                 src="kronosicon.png"
@@ -486,20 +488,13 @@
                 class="kronos-icon"
             >
 
-        </a>
+        </div>
 
 
         <div class="info">
 
-            <h2>
-
-                <a
-                    href="kronos.html"
-                    class="app-title"
-                >
-                    Kronos
-                </a>
-
+            <h2 class="app-title">
+                Kronos
             </h2>
 
 
@@ -519,7 +514,7 @@
 
         </div>
 
-    </div>
+    </a>
 
 
 
@@ -527,13 +522,13 @@
          LOCK
     ====================== -->
 
-    <div class="card">
+    <a
+        href="lock.html"
+        class="card"
+        aria-label="Ver LOck"
+    >
 
-        <a
-            href="lock.html"
-            class="icon"
-            aria-label="Ver LOck"
-        >
+        <div class="icon">
 
             <img
                 src="iconlock.png"
@@ -541,20 +536,13 @@
                 class="lock-icon"
             >
 
-        </a>
+        </div>
 
 
         <div class="info">
 
-            <h2>
-
-                <a
-                    href="lock.html"
-                    class="app-title"
-                >
-                    LOck
-                </a>
-
+            <h2 class="app-title">
+                LOck
             </h2>
 
 
@@ -574,7 +562,7 @@
 
         </div>
 
-    </div>
+    </a>
 
 
 
@@ -582,33 +570,26 @@
          CALCULADORA
     ====================== -->
 
-    <div class="card">
+    <a
+        href="calculadora.html"
+        class="card"
+        aria-label="Ver Calculadora Mágica"
+    >
 
-        <a
-            href="calculadora.html"
-            class="icon"
-            aria-label="Ver Calculadora Mágica"
-        >
+        <div class="icon">
 
             <img
                 src="calculadora.png"
                 alt="Calculadora Mágica"
             >
 
-        </a>
+        </div>
 
 
         <div class="info">
 
-            <h2>
-
-                <a
-                    href="calculadora.html"
-                    class="app-title"
-                >
-                    Calculadora Mágica
-                </a>
-
+            <h2 class="app-title">
+                Calculadora Mágica
             </h2>
 
 
@@ -627,7 +608,7 @@
 
         </div>
 
-    </div>
+    </a>
 
 
 
@@ -635,13 +616,13 @@
          MINDHOOK
     ====================== -->
 
-    <div class="card">
+    <a
+        href="mindhook.html"
+        class="card"
+        aria-label="Ver MindHook"
+    >
 
-        <a
-            href="mindhook.html"
-            class="icon"
-            aria-label="Ver MindHook"
-        >
+        <div class="icon">
 
             <img
                 src="gancho.png"
@@ -649,20 +630,13 @@
                 class="mindhook-icon"
             >
 
-        </a>
+        </div>
 
 
         <div class="info">
 
-            <h2>
-
-                <a
-                    href="mindhook.html"
-                    class="app-title"
-                >
-                    MindHook
-                </a>
-
+            <h2 class="app-title">
+                MindHook
             </h2>
 
 
@@ -681,7 +655,7 @@
 
         </div>
 
-    </div>
+    </a>
 
 
 
@@ -689,13 +663,13 @@
          SCREENCARD
     ====================== -->
 
-    <div class="card">
+    <a
+        href="screencard.html"
+        class="card"
+        aria-label="Ver ScreenCard"
+    >
 
-        <a
-            href="screencard.html"
-            class="icon"
-            aria-label="Ver ScreenCard"
-        >
+        <div class="icon">
 
             <img
                 src="screencard.png"
@@ -703,20 +677,13 @@
                 class="screencard-icon"
             >
 
-        </a>
+        </div>
 
 
         <div class="info">
 
-            <h2>
-
-                <a
-                    href="screencard.html"
-                    class="app-title"
-                >
-                    ScreenCard
-                </a>
-
+            <h2 class="app-title">
+                ScreenCard
             </h2>
 
 
@@ -735,7 +702,7 @@
 
         </div>
 
-    </div>
+    </a>
 
 
 </section>
