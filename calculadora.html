@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Mágica - Daster FX</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Segoe UI, sans-serif;
+        }
+
+        body {
+            background: #0d0d0d;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .page {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 40px 20px;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    rgba(255, 140, 0, 0.18),
+                    transparent 45%
+                ),
+                linear-gradient(
+                    180deg,
+                    #161616,
+                    #0d0d0d
+                );
+        }
+
+        .product {
+            width: 100%;
+            max-width: 850px;
+
+            background: #181818;
+
+            border: 1px solid rgba(255, 140, 0, 0.15);
+
+            border-radius: 35px;
+
+            padding: 60px 50px;
+
+            text-align: center;
+
+            box-shadow:
+                0 0 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .product-icon {
+            width: 180px;
+            height: 180px;
+
+            margin: 0 auto 30px;
+
+            border-radius: 40px;
+
+            overflow: hidden;
+
+            background: #232323;
+        }
+
+        .product-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 52px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .divider {
+            width: 100px;
+            height: 4px;
+
+            background: #ff8c00;
+
+            margin: 0 auto 30px;
+
+            border-radius: 20px;
+        }
+
+        .description {
+            max-width: 700px;
+
+            margin: 0 auto 35px;
+
+            color: #c0c0c0;
+
+            font-size: 18px;
+
+            line-height: 1.9;
+        }
+
+        .status {
+            color: #ff8c00;
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+            margin-bottom: 25px;
+        }
+
+        .download {
+            display: inline-block;
+
+            background: #ff8c00;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 17px 45px;
+
+            border-radius: 18px;
+
+            font-weight: bold;
+
+            font-size: 17px;
+
+            transition: 0.3s;
+
+            margin-bottom: 30px;
+        }
+
+        .download:hover {
+            background: #ff9f26;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(255, 140, 0, 0.2);
+        }
+
+        .back {
+            display: block;
+
+            color: #888;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            .product {
+                padding: 40px 25px;
+            }
+
+            .product-icon {
+                width: 140px;
+                height: 140px;
+
+                border-radius: 30px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+
+            .status {
+                font-size: 24px;
+            }
+
+            .download {
+                width: 100%;
+                padding: 16px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="product">
+
+        <div class="product-icon">
+            <img
+                src="calculadora.png"
+                alt="Calculadora Mágica"
+            >
+        </div>
+
+        <h1>
+            Calculadora Mágica
+        </h1>
+
+        <div class="divider"></div>
+
+        <div class="description">
+
+            Una poderosa herramienta para magos y mentalistas
+            que transforma una simple calculadora en un increíble
+            efecto de magia.
+
+            <br><br>
+
+            Diseñada para actuaciones profesionales, magia de cerca
+            y presentaciones de mentalismo.
+
+            <br><br>
+
+            Una calculadora aparentemente normal que puede convertirse
+            en una herramienta secreta para crear experiencias
+            imposibles.
+
+        </div>
+
+        <div class="status">
+            Disponible ahora
+        </div>
+
+        <a
+            class="download"
+            href="https://exequiel53.gumroad.com/l/asjnjx"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            ⬇ Descargar Calculadora Mágica
+        </a>
+
+        <a
+            href="index.html"
+            class="back"
+        >
+            ← Volver a Daster FX
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
