@@ -200,7 +200,9 @@
         }
 
 
-        /* ICONO */
+        /* =========================
+           ICONOS CLICKEABLES
+        ========================= */
 
         .icon {
             width: 145px;
@@ -220,6 +222,23 @@
             flex-shrink: 0;
 
             box-shadow:
+                inset 0 0 20px rgba(0, 0, 0, 0.25);
+
+            cursor: pointer;
+
+            text-decoration: none;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .icon:hover {
+            transform: scale(1.04);
+
+            box-shadow:
+                0 0 25px rgba(255, 140, 0, 0.25),
                 inset 0 0 20px rgba(0, 0, 0, 0.25);
         }
 
@@ -241,7 +260,9 @@
         }
 
 
-        /* INFORMACION */
+        /* =========================
+           INFORMACION
+        ========================= */
 
         .info {
             flex: 1;
@@ -262,7 +283,8 @@
 
             text-decoration: none;
 
-            transition: color 0.25s ease;
+            transition:
+                color 0.25s ease;
         }
 
 
@@ -452,7 +474,11 @@
 
     <div class="card">
 
-        <div class="icon">
+        <a
+            href="kronos.html"
+            class="icon"
+            aria-label="Ver Kronos"
+        >
 
             <img
                 src="kronosicon.png"
@@ -460,7 +486,7 @@
                 class="kronos-icon"
             >
 
-        </div>
+        </a>
 
 
         <div class="info">
@@ -503,7 +529,11 @@
 
     <div class="card">
 
-        <div class="icon">
+        <a
+            href="lock.html"
+            class="icon"
+            aria-label="Ver LOck"
+        >
 
             <img
                 src="iconlock.png"
@@ -511,7 +541,7 @@
                 class="lock-icon"
             >
 
-        </div>
+        </a>
 
 
         <div class="info">
@@ -554,14 +584,18 @@
 
     <div class="card">
 
-        <div class="icon">
+        <a
+            href="calculadora.html"
+            class="icon"
+            aria-label="Ver Calculadora Mágica"
+        >
 
             <img
                 src="calculadora.png"
                 alt="Calculadora Mágica"
             >
 
-        </div>
+        </a>
 
 
         <div class="info">
@@ -603,7 +637,11 @@
 
     <div class="card">
 
-        <div class="icon">
+        <a
+            href="mindhook.html"
+            class="icon"
+            aria-label="Ver MindHook"
+        >
 
             <img
                 src="gancho.png"
@@ -611,7 +649,7 @@
                 class="mindhook-icon"
             >
 
-        </div>
+        </a>
 
 
         <div class="info">
@@ -653,7 +691,11 @@
 
     <div class="card">
 
-        <div class="icon">
+        <a
+            href="screencard.html"
+            class="icon"
+            aria-label="Ver ScreenCard"
+        >
 
             <img
                 src="screencard.png"
@@ -661,7 +703,7 @@
                 class="screencard-icon"
             >
 
-        </div>
+        </a>
 
 
         <div class="info">
