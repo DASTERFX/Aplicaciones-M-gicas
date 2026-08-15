@@ -158,7 +158,7 @@
 
 
         /* =========================
-           TARJETA CLICKEABLE
+           TARJETAS
         ========================= */
 
         .card {
@@ -184,9 +184,14 @@
 
             margin-bottom: 28px;
 
-            text-decoration: none;
-
             color: white;
+        }
+
+
+        /* TARJETAS CLICKEABLES */
+
+        a.card {
+            text-decoration: none;
 
             cursor: pointer;
 
@@ -198,9 +203,7 @@
         }
 
 
-        /* EFECTO AL PASAR POR TODA LA TARJETA */
-
-        .card:hover {
+        a.card:hover {
             transform: translateY(-5px);
 
             background: #1b1b1b;
@@ -244,7 +247,7 @@
         }
 
 
-        .card:hover .icon {
+        a.card:hover .icon {
             transform: scale(1.04);
 
             box-shadow:
@@ -567,7 +570,7 @@
 
 
     <!-- =====================
-         CALCULADORA
+         CALCULADORA MÁGICA
     ====================== -->
 
     <a
@@ -614,13 +617,10 @@
 
     <!-- =====================
          MINDHOOK
+         SIN ENLACE
     ====================== -->
 
-    <a
-        href="mindhook.html"
-        class="card"
-        aria-label="Ver MindHook"
-    >
+    <div class="card">
 
         <div class="icon">
 
@@ -655,19 +655,16 @@
 
         </div>
 
-    </a>
+    </div>
 
 
 
     <!-- =====================
          SCREENCARD
+         SIN ENLACE
     ====================== -->
 
-    <a
-        href="screencard.html"
-        class="card"
-        aria-label="Ver ScreenCard"
-    >
+    <div class="card">
 
         <div class="icon">
 
@@ -702,7 +699,7 @@
 
         </div>
 
-    </a>
+    </div>
 
 
 </section>
